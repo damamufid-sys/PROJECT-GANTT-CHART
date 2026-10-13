@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "types": ["node"],
+    "lib": ["ES2022"],
+    "noEmit": true,
+    "declaration": false
+  },
+  "include": ["src", "prisma", "tests", "vitest.config.ts"]
+}
