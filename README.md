@@ -3,6 +3,16 @@
 Aplikasi web manajemen proyek berbasis Gantt Chart, multi-pengguna, dengan data tersimpan di
 database melalui REST API (bukan `localStorage`). Antarmuka berbahasa Indonesia.
 
+## Tangkapan layar
+
+**Halaman Gantt** — bar tugas bertingkat, panah dependensi, progres, penanda hari ini, dan garis jalur kritis.
+
+![Halaman Gantt dengan bar tugas, panah dependensi, dan penanda hari ini](docs/screenshots/gantt.png)
+
+**Halaman Tim** — alokasi anggota ke tugas, total biaya per anggota, dan peringatan over-alokasi.
+
+![Halaman Tim dengan daftar anggota, alokasi tugas, total biaya, dan peringatan over-alokasi](docs/screenshots/tim.png)
+
 ## Daftar fitur
 
 1. **Manajemen tugas** — tambah/ubah/hapus tugas, durasi dalam hari kerja, tanggal mulai paling
@@ -110,10 +120,10 @@ dengan status 400/422 (validasi), 401 (belum login), 404 (tidak ditemukan), 409 
 ## Test
 
 ```bash
-npm test                 # seluruh workspace: shared (32), server (51), client (13)
+npm test                 # seluruh workspace: shared (32), server (51), client (20)
 npm test -w shared       # mesin penjadwalan termasuk seluruh vektor uji blueprint 6.11
 npm test -w server       # integrasi Supertest memakai database SQLite terpisah (server/prisma/test.db)
-npm test -w client       # test komponen: bar Gantt, panah dependensi, PERT, form tugas
+npm test -w client       # test komponen dan halaman: bar Gantt, panah dependensi, PERT, form tugas
 ```
 
 ## Asumsi
